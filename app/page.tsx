@@ -156,6 +156,137 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Disclaimer & Contact Section */}
+<section className="bg-neutral-50 px-6 py-16 border-t border-neutral-200">
+  <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-start">
+    
+    {/* Legal Text */}
+    <div className="flex-1">
+      <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-4">
+        Legal Disclaimer
+      </h3>
+
+      <p className="text-sm text-neutral-500 leading-relaxed">
+        The information provided on TechBroom is for{" "}
+        <span className="text-neutral-900 font-semibold">
+          general informational purposes only
+        </span>
+        . While we strive to keep the information accurate and up to date,
+        we make no representations or warranties regarding the{" "}
+        <span className="text-neutral-900 font-semibold">
+          completeness, accuracy, reliability, suitability, or availability
+        </span>{" "}
+        of the information presented on this website.
+      </p>
+
+      <p className="text-sm text-neutral-500 leading-relaxed mt-4">
+        All technology reviews, vehicle specifications, comparisons, software
+        opinions, and other editorial content represent the{" "}
+        <span className="text-neutral-900 font-semibold">
+          independent views of the author
+        </span>{" "}
+        and do not constitute professional, financial, legal, or technical
+        advice. Your use of this website and reliance on any information
+        provided is{" "}
+        <span className="text-neutral-900 font-semibold">
+          solely at your own risk
+        </span>
+        .
+      </p>
+
+      <p className="text-sm text-neutral-500 leading-relaxed mt-4">
+        While we make reasonable efforts to provide accurate information,
+        product specifications, prices, features, availability, and other
+        details may change without notice. We therefore{" "}
+        <span className="text-neutral-900 font-semibold">
+          cannot guarantee that all information will always be complete,
+        </span>{" "}
+        current, or error-free.
+      </p>
+
+      <p className="text-sm text-neutral-500 leading-relaxed mt-4">
+        Brands, product names, logos, trademarks, and service marks mentioned
+        on TechBroom, including those belonging to companies such as Apple,
+        Samsung, Google, Microsoft, and others, remain the{" "}
+        <span className="text-neutral-900 font-semibold">
+          property of their respective owners
+        </span>
+        . Their mention or display on this website does not imply any
+        affiliation, endorsement, sponsorship, or partnership unless
+        explicitly stated.
+      </p>
+
+      <p className="text-sm text-neutral-500 leading-relaxed mt-4">
+        TechBroom reserves the right to make{" "}
+        <span className="text-neutral-900 font-semibold">
+          additions, deletions, corrections, or modifications
+        </span>{" "}
+        to the website and its content at any time without prior notice.
+      </p>
+
+      <p className="text-xs text-neutral-400 leading-relaxed mt-6">
+        By using this website, you acknowledge that you have read,
+        understood, and agreed to this disclaimer.
+      </p>
+    </div>
+
+    {/* Contact Card */}
+    <div className="w-full md:w-96 bg-white p-8 rounded-3xl border border-neutral-100 shadow-sm hover:shadow-md transition-shadow duration-300 shrink-0">
+      <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6">
+        Ownership & Contact
+      </h3>
+
+      <div className="mb-6">
+        <p className="text-sm text-neutral-500 mb-1">
+          Platform Owned & Managed By
+        </p>
+
+        <p className="text-xl font-bold text-neutral-900">
+          Adarsh Kumar Jha
+        </p>
+      </div>
+
+      <div className="space-y-5">
+        {/* Email */}
+        <div>
+          <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-1">
+            Email
+          </p>
+
+          <a
+            href="mailto:jhaa50872@gmail.com"
+            className="text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
+          >
+            jhaa50872@gmail.com
+          </a>
+        </div>
+
+        {/* Phone */}
+        <div>
+          <p className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-1">
+            Phone
+          </p>
+
+          <a
+            href="tel:+917079393887"
+            className="text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
+          >
+            +91 70793 93887
+          </a>
+        </div>
+      </div>
+
+      <div className="mt-8 pt-6 border-t border-neutral-100">
+        <p className="text-xs text-neutral-400 leading-relaxed">
+          For website-related inquiries, content concerns, corrections,
+          support requests, or official communication, please contact us
+          directly using the information above.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Footer */}
       <footer className="bg-white py-12 border-t border-neutral-200">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500 font-medium">

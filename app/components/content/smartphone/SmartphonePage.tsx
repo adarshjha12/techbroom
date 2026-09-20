@@ -9,6 +9,7 @@ import SmartphoneBattery from "./SmartphoneBattery";
 import SmartphoneOwnerReviews from "./SmartphoneOwnerReviews";
 import SmartphoneComparisons from "./SmartphoneComparisons";
 import SmartphoneBuyDecision from "./SmartphoneBuyDecision";
+import SmartphoneStructuredData from "./SmartphoneStructuredData";
 
 type SmartphonePageProps = {
   content: SmartphoneContent;
@@ -19,20 +20,22 @@ export default function SmartphonePage({
 }: SmartphonePageProps) {
   return (
     <main>
+      <SmartphoneStructuredData content={content} />
+
       <SmartphoneHero content={content} />
       <SmartphoneOverview specs={content.specs} />
 
-     <SmartphoneDisplay specs={content.specs} />
+      <SmartphoneDisplay specs={content.specs} />
 
-    <SmartphonePerformance specs={content.specs} />
+      <SmartphonePerformance specs={content.specs} />
 
-     <SmartphoneCamera specs={content.specs} />
+      <SmartphoneCamera specs={content.specs} />
 
-     <SmartphoneBattery specs={content.specs} />
+      <SmartphoneBattery specs={content.specs} />
 
-    <SmartphoneOwnerReviews reviews={content.reviews} />
+      <SmartphoneOwnerReviews reviews={content.reviews} />
 
-    <SmartphoneComparisons comparisons={content.comparisons} />
+      <SmartphoneComparisons comparisons={content.comparisons} />
 
       <SmartphoneBuyDecision decision={content.buyDecision} />
     </main>

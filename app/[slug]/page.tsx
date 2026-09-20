@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getContent } from "@/lib/content/getContent";
@@ -8,6 +9,41 @@ type ContentPageProps = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: ContentPageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const content = getContent(slug);
+
+  if (!content) {
+    return {};
+  }
+
+  return {
+    title: content.name,
+    description: content.description,
+
+    alternates: {
+      canonical: `https://techbroom.com/${content.slug}`,
+    },
+
+    openGraph: {
+      title: content.name,
+      description: content.description,
+      url: `https://techbroom.com/${content.slug}`,
+      siteName: "TechBroom",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: content.name,
+      description: content.description,
+    },
+  };
+}
 
 export default async function ContentPage({
   params,
@@ -25,15 +61,12 @@ export default async function ContentPage({
       return <SmartphonePage content={content} />;
 
     case "ev":
-      // We'll build this later.
       notFound();
 
     case "ai":
-      // We'll build this later.
       notFound();
 
     case "software":
-      // We'll build this later.
       notFound();
 
     default:

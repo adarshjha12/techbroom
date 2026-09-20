@@ -98,7 +98,7 @@ export default function SmartphoneHero({ content }: SmartphoneHeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-neutral-500 sm:text-6xl lg:text-6xl"
+            className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-neutral-500 sm:text-7xl lg:text-7xl"
           >
             {content.name}
           </motion.h1>

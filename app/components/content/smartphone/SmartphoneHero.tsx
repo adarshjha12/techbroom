@@ -215,6 +215,7 @@ export default function SmartphoneHero({ content }: SmartphoneHeroProps) {
                     width={1000} // Increased internal resolution
                     height={1200}
                     priority
+                    fetchPriority="high"
                     src={currentImageUrl}
                     alt={content.name}
                     // INCREASED: max-height from 620px to 850px

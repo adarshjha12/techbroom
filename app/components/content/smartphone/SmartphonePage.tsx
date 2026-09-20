@@ -10,6 +10,7 @@ import SmartphoneOwnerReviews from "./SmartphoneOwnerReviews";
 import SmartphoneComparisons from "./SmartphoneComparisons";
 import SmartphoneBuyDecision from "./SmartphoneBuyDecision";
 import SmartphoneStructuredData from "./SmartphoneStructuredData";
+import Breadcrumbs from "../Breadcrumbs";
 
 type SmartphonePageProps = {
   content: SmartphoneContent;
@@ -19,7 +20,18 @@ export default function SmartphonePage({
   content,
 }: SmartphonePageProps) {
   return (
-    <main>
+    <div>
+      <Breadcrumbs
+        items={[
+          {
+            label: "Smartphones",
+            href: "/smartphones",
+          },
+          {
+            label: content.name,
+          },
+        ]}
+      />
       <SmartphoneStructuredData content={content} />
 
       <SmartphoneHero content={content} />
@@ -35,9 +47,10 @@ export default function SmartphonePage({
 
       <SmartphoneOwnerReviews reviews={content.reviews} />
 
-      <SmartphoneComparisons comparisons={content.comparisons} />
+      <SmartphoneComparisons slug={content.slug}
+        comparisons={content.comparisons} />
 
       <SmartphoneBuyDecision decision={content.buyDecision} />
-    </main>
+    </div>
   );
 }

@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import type { SmartphoneCameraSample, SmartphoneCameraVerdict } from "@/lib/content/types"; 
+import type { SmartphoneCameraSample, SmartphoneCameraVerdict } from "@/lib/content/types";
 
 // Helper component for the animated circular score ring
 const CircularScore = ({ score }: { score: number }) => {
   const [animated, setAnimated] = useState(0);
   const percentage = (score / 10) * 100;
-  
+
   // Color logic based on score
   const strokeColor = score >= 9 ? "text-emerald-500" : score >= 8 ? "text-blue-500" : "text-amber-500";
 
@@ -48,19 +48,19 @@ const CircularScore = ({ score }: { score: number }) => {
 };
 
 // --- 1. Reusable Animated Circle Component ---
-const BigCircularScore = ({ 
-  score, 
-  delay, 
-  isVisible, 
-  label, 
+const BigCircularScore = ({
+  score,
+  delay,
+  isVisible,
+  label,
   size = "w-24 h-24 sm:w-32 sm:h-32",
   textClass = "text-3xl sm:text-4xl",
   strokeColor = "text-emerald-400",
   isGradient = false
-}: { 
-  score: number; 
-  delay: number; 
-  isVisible: boolean; 
+}: {
+  score: number;
+  delay: number;
+  isVisible: boolean;
   label?: string;
   size?: string;
   textClass?: string;
@@ -82,11 +82,10 @@ const BigCircularScore = ({
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-<div
-  className={`relative flex items-center justify-center rounded-full bg-neutral-800 shadow-2xl ${size} ${
-    isGradient ? "" : strokeColor
-  }`}
->        <svg className="absolute h-full w-full -rotate-90 transform drop-shadow-md" viewBox="0 0 36 36">
+      <div
+        className={`relative flex items-center justify-center rounded-full bg-neutral-800 shadow-2xl ${size} ${isGradient ? "" : strokeColor
+          }`}
+      >        <svg className="absolute h-full w-full -rotate-90 transform drop-shadow-md" viewBox="0 0 36 36">
           {/* Background Track */}
           <path
             className="text-neutral-700/50"
@@ -122,7 +121,7 @@ const BigCircularScore = ({
           {score}
         </span>
       </div>
-      
+
       {/* Category Label */}
       {label && (
         <span className="text-sm font-semibold uppercase tracking-widest text-neutral-400 text-center">
@@ -152,7 +151,7 @@ export default function SmartphoneCameraSamples({
           setIsDecisionSectionVisible(true);
           // Optional: unobserve after triggering once so it stays filled
           if (decisionSectionRef.current) {
-             observer.unobserve(decisionSectionRef.current);
+            observer.unobserve(decisionSectionRef.current);
           }
         }
       },
@@ -175,7 +174,7 @@ export default function SmartphoneCameraSamples({
   return (
     <section className="bg-[#fbfbfd] px-4 py-24 sm:px-6 sm:py-32 font-sans">
       <div className="mx-auto max-w-6xl">
-        
+
         {/* Gallery Header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-neutral-400 mb-3">
@@ -184,21 +183,24 @@ export default function SmartphoneCameraSamples({
           <h2 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
             See the results.
 
-                        {samples[0].credit && (
-              <p className="mt-2 text-xl text-neutral-500">
-                Photo by {samples[0].credit}
-                {samples[0].creditUrl && (
+            {samples[0].credit && (
+              <p className="mt-2 text-lg text-neutral-500">
+                Photo by{" "}
+                {samples[0].creditUrl ? (
                   <a
                     href={samples[0].creditUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 text-blue-500 hover:text-blue-700"
+                    className="font-medium text-neutral-700 underline underline-offset-2 hover:text-blue-600"
                   >
-                    (View Source)
+                    {samples[0].credit}
                   </a>
+                ) : (
+                  samples[0].credit
                 )}
               </p>
             )}
+
           </h2>
         </div>
 
@@ -218,7 +220,7 @@ export default function SmartphoneCameraSamples({
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                 />
-                
+
                 {/* Glassmorphic Thoughts Overlay - Slides up on hover */}
                 {sample.thoughts && (
                   <div className="absolute inset-x-0 bottom-0 translate-y-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
@@ -272,7 +274,7 @@ export default function SmartphoneCameraSamples({
 
         {/* 2. The Decision Maker Section (Triggered on scroll) */}
         {verdict && (
-          <div 
+          <div
             ref={decisionSectionRef}
             className="mt-32 rounded-[3rem] bg-neutral-950 p-8 sm:p-16 shadow-2xl relative overflow-hidden"
           >
@@ -293,7 +295,7 @@ export default function SmartphoneCameraSamples({
               {/* Individual Scores Grid (Sequential Animation) */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 border-b border-neutral-800 pb-20">
                 {samples.map((sample, index) => (
-                  <BigCircularScore 
+                  <BigCircularScore
                     key={sample.title}
                     score={sample.cameraScore || 0}
                     label={sample.category}
@@ -307,13 +309,13 @@ export default function SmartphoneCameraSamples({
 
               {/* Final Verdict Section */}
               <div className="mt-20 flex flex-col lg:flex-row items-center justify-center gap-16">
-                
+
                 {/* Giant Final Score */}
                 <div className="flex-shrink-0 text-center">
                   <h4 className="text-sm font-bold uppercase tracking-widest text-neutral-400 mb-8">
                     Overall System Score
                   </h4>
-                  <BigCircularScore 
+                  <BigCircularScore
                     score={averageScore}
                     isVisible={isDecisionSectionVisible}
                     delay={samples.length * 300 + 400} // Waits for all other circles to finish + 400ms buffer
@@ -331,7 +333,7 @@ export default function SmartphoneCameraSamples({
                   <p className="text-lg text-neutral-300 leading-relaxed mb-8">
                     {verdict.summary}
                   </p>
-                  
+
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
                       <h4 className="flex items-center text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">

@@ -49,6 +49,7 @@ export default function SmartphonePage({
 
       <SmartphoneCameraSamples
         samples={content.cameraSamples}
+        verdict={content.cameraVerdict}
       />
 
       <SmartphoneBattery specs={content.specs} />

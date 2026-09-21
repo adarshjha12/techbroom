@@ -31,11 +31,11 @@ export interface BaseContent {
 
   status: ContentStatus;
 
-images: {
-  hero: string;
-  hero2?: string;
-  gallery: ContentImage[];
-};
+  images: {
+    hero: string;
+    hero2?: string;
+    gallery: ContentImage[];
+  };
 
   publishedAt?: string;
   updatedAt?: string;
@@ -58,8 +58,14 @@ export interface SmartphoneContent extends BaseContent {
   reviews: SmartphoneOwnerReviews;
   comparisons: SmartphoneComparison[];
   buyDecision: SmartphoneBuyDecision;
-    cameraSamples: SmartphoneCameraSample[];
+  cameraSamples: SmartphoneCameraSample[];
+  cameraVerdict: SmartphoneCameraVerdict;
+}
 
+export interface SmartphoneCameraVerdict {
+  pros: string[];
+  cons: string[];
+  summary: string;
 }
 
 export interface ContentImage {
@@ -72,14 +78,16 @@ export interface SmartphoneCameraSample {
   title: string;
   image: string;
   credit?: string;
-  creditUrl?: string;   
+  creditUrl?: string;
+  cameraScore?: number;
+  thoughts?: string;
   category:
-    | "main"
-    | "ultrawide"
-    | "telephoto"
-    | "portrait"
-    | "night"
-    | "selfie";
+  | "main"
+  | "ultrawide"
+  | "telephoto"
+  | "portrait"
+  | "night"
+  | "selfie";
   metadata?: {
     focalLength?: string;
     aperture?: string;

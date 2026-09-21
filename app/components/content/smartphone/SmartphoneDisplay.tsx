@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Eye, Maximize2, Smartphone, Zap } from "lucide-react";
 import type { SmartphoneSpecSection } from "@/lib/content/types";
 
@@ -10,7 +10,7 @@ type SmartphoneDisplayProps = {
 };
 
 // Animation Variants for Scroll Reveals
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -21,7 +21,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,

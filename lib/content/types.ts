@@ -165,6 +165,7 @@ export interface SmartphoneSpecItem {
 
 export interface SmartphoneSpecSection {
   title: string;
+  image?: string;
   items: SmartphoneSpecItem[];
 }
 

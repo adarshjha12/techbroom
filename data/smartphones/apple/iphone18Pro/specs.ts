@@ -1,6 +1,7 @@
 export const iphone18ProSpecs = {
   display: {
     title: "Display",
+    image: "https://www.cultofmac.com/wp-content/uploads/2026/04/Dark-Cherry-iPhone-18-Pro-4.jpg",
     items: [
       {
         label: "Size",
@@ -23,6 +24,7 @@ export const iphone18ProSpecs = {
 
   performance: {
     title: "Performance",
+    image: "https://cdn.wccftech.com/wp-content/uploads/2026/09/Apple-A20-Pro-2.jpg",
     items: [
       {
         label: "Chipset",
@@ -41,6 +43,7 @@ export const iphone18ProSpecs = {
 
   camera: {
     title: "Camera",
+    image: "https://www.techadvisor.com/wp-content/uploads/2026/06/iPhone-18-Pro-dark-cherry-3.jpg?quality=50&strip=all&w=1024",
     items: [
       {
         label: "Main Camera",

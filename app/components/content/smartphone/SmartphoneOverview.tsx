@@ -43,55 +43,49 @@ export default function SmartphoneOverview({
   return (
     <section
       id="overview"
-      className="border-t border-neutral-200 bg-white px-6 py-20"
+      className="bg-white px-6 py-24 sm:py-32"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="mb-10 max-w-2xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500">
-            Overview
+        <div className="mx-auto mb-20 max-w-3xl text-center">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-zinc-400">
+            The Details
           </p>
 
-          <h2 className="text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
-            Everything important at a glance.
+          <h2 className="mb-6 text-4xl font-semibold tracking-tighter text-black sm:text-6xl">
+            Pro in every way.
           </h2>
 
-          <p className="mt-4 text-base leading-7 text-neutral-600">
-            A quick look at the key hardware and specifications of this
-            smartphone.
+          <p className="text-lg font-medium tracking-tight text-zinc-500 sm:text-xl">
+            A closer look at the advanced hardware and key specifications that make it all possible.
           </p>
         </div>
 
-        {/* Key Highlights */}
-        <div className="mb-8 grid grid-cols-2 overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-50 md:grid-cols-4">
-          {highlightConfig.map((highlight, index) => {
+        {/* Key Highlights (Bento Hero Stats) */}
+        <div className="mb-6 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          {highlightConfig.map((highlight) => {
             const section = specs[highlight.section];
-
-            if (!section) {
-              return null;
-            }
+            if (!section) return null;
 
             const firstItem = section.items[0];
+            const Icon = sectionIcons[highlight.section as keyof typeof sectionIcons];
 
             return (
               <div
                 key={highlight.section}
-                className={`p-5 md:p-6 ${
-                  index !== 0
-                    ? "border-t border-neutral-200 md:border-l md:border-t-0"
-                    : ""
-                }`}
+                className="group relative flex flex-col items-center justify-center overflow-hidden rounded-[2rem] bg-zinc-50 p-8 text-center transition-all duration-500 hover:scale-[1.02] hover:bg-zinc-100 hover:shadow-2xl hover:shadow-black/5"
               >
-                <p className="text-xs font-medium uppercase tracking-wider text-neutral-500">
-                  {highlight.label}
-                </p>
-
-                <p className="mt-2 text-xl font-semibold tracking-tight text-neutral-900">
+                {/* Subtle background glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                
+                <Icon className="mb-6 h-8 w-8 text-zinc-400 transition-transform duration-500 group-hover:-translate-y-1 group-hover:text-black" />
+                
+                <p className="relative z-10 mb-2 text-3xl font-bold tracking-tighter text-black sm:text-4xl">
                   {firstItem?.value ?? "—"}
                 </p>
-
-                <p className="mt-1 text-xs text-neutral-500">
-                  {firstItem?.label ?? ""}
+                
+                <p className="relative z-10 text-xs font-bold uppercase tracking-widest text-zinc-400">
+                  {highlight.label}
                 </p>
               </div>
             );
@@ -99,40 +93,43 @@ export default function SmartphoneOverview({
         </div>
 
         {/* Detailed Specification Cards */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           {Object.entries(specs).map(([key, section]) => {
             const Icon =
-              sectionIcons[key as keyof typeof sectionIcons] ??
-              Smartphone;
+              sectionIcons[key as keyof typeof sectionIcons] ?? Smartphone;
 
             return (
               <div
                 key={key}
-                className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6 transition-colors hover:bg-neutral-100"
+                className="group rounded-[2.5rem] bg-zinc-50 p-8 sm:p-10 transition-all duration-500 hover:bg-zinc-100"
               >
                 {/* Card Header */}
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white ring-1 ring-neutral-200">
-                    <Icon className="h-5 w-5 text-neutral-700" />
+                <div className="mb-8 flex items-center gap-5">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition-transform duration-500 group-hover:scale-110">
+                    <Icon className="h-6 w-6 text-black" strokeWidth={2} />
                   </div>
 
-                  <h3 className="text-lg font-semibold text-neutral-900">
+                  <h3 className="text-2xl font-semibold tracking-tight text-black">
                     {section.title}
                   </h3>
                 </div>
 
                 {/* Specification List */}
-                <div className="divide-y divide-neutral-200">
-                  {section.items.map((item) => (
+                <div className="flex flex-col gap-4">
+                  {section.items.map((item, index) => (
                     <div
                       key={item.label}
-                      className="flex items-center justify-between gap-6 py-3.5"
+                      className={`flex items-start justify-between gap-6 ${
+                        index !== section.items.length - 1
+                          ? "border-b border-zinc-200/60 pb-4"
+                          : ""
+                      }`}
                     >
-                      <span className="text-sm text-neutral-500">
+                      <span className="text-base font-medium text-zinc-500">
                         {item.label}
                       </span>
 
-                      <span className="text-right text-sm font-medium text-neutral-900">
+                      <span className="text-right text-base font-semibold text-black">
                         {item.value}
                       </span>
                     </div>

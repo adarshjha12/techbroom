@@ -71,6 +71,8 @@ export interface ContentImage {
 export interface SmartphoneCameraSample {
   title: string;
   image: string;
+  credit?: string;
+  creditUrl?: string;   
   category:
     | "main"
     | "ultrawide"

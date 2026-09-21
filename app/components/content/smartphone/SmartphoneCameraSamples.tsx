@@ -37,6 +37,22 @@ export default function SmartphoneCameraSamples({
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
             See how the cameras perform
+
+            {samples[0].credit && (
+              <p className="mt-2 text-sm text-neutral-500">
+                Photo by {samples[0].credit}
+                {samples[0].creditUrl && (
+                  <a
+                    href={samples[0].creditUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-500 hover:text-blue-700"
+                  >
+                    (View Source)
+                  </a>
+                )}
+              </p>
+            )}  
           </h2>
 
           <p className="mt-4 text-base leading-7 text-neutral-600">
@@ -61,6 +77,7 @@ export default function SmartphoneCameraSamples({
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
+                    
                   />
                 </div>
 

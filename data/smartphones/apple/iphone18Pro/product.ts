@@ -53,9 +53,11 @@ images: {
 
   cameraSamples: [
   {
-    title: "Main Camera Sample",
+    title: "Main Camera",
+    credit: "Austin Mann", 
+    creditUrl: "https://www.austinmann.com",
     image:
-      "/images/smartphones/apple/iphone-18-pro/camera/main.webp",
+      "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_3543_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
     category: "main",
     metadata: {
       focalLength: "24mm",
@@ -65,9 +67,9 @@ images: {
     },
   },
   {
-    title: "Ultra Wide Camera Sample",
+    title: "Portrait",
     image:
-      "/images/smartphones/apple/iphone-18-pro/camera/ultrawide.webp",
+      "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_4416_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
     category: "ultrawide",
     metadata: {
       focalLength: "13mm",
@@ -75,9 +77,9 @@ images: {
     },
   },
   {
-    title: "Telephoto Camera Sample",
+    title: "Telephoto/Zoom",
     image:
-      "/images/smartphones/apple/iphone-18-pro/camera/telephoto.webp",
+      "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_1230_still_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
     category: "telephoto",
     metadata: {
       focalLength: "100mm",
@@ -85,10 +87,10 @@ images: {
     },
   },
   {
-    title: "Front Camera Sample",
+    title: "Ultrawide",
     image:
-      "/images/smartphones/apple/iphone-18-pro/camera/selfie.webp",
-    category: "selfie",
+      "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_2572_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+    category: "ultrawide",
   },
 ],
 

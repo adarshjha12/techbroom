@@ -64,6 +64,13 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**', 
       },
+
+       {
+        protocol: 'https',
+        hostname: 'www.austinmann.com',
+        port: '',
+        pathname: '/**', 
+      },
     ],
   },
 };

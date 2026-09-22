@@ -88,7 +88,7 @@ export const iphone18Pro: SmartphoneContent = {
     },
     {
       title: "Night Mode",
-      image: "https://www.austinmann.com//content/trek/iphone-18-pro-camera-review-dunton/images/IMG_0273_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+      image: "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_0273_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
       category: "night",
       thoughts: "Preserves the mood perfectly. It lifts shadows without making the night look like artificial daylight.",
       cameraScore: 9.5,

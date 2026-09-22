@@ -44,14 +44,11 @@ export default function SmartphonePerformance({
           </span>
 
           <h2 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-            Built for speed.{" "}
-            <span className="bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
-              Engineered for absolute power.
-            </span>
+           {performance.heading || "Performance: how much power do you actually get?" }
           </h2>
 
           <p className="text-lg leading-8 text-neutral-400">
-            The chip, memory, and high-speed storage work seamlessly together to deliver extraordinary responsiveness and handle demanding pro workloads effortlessly.
+            {performance.subheading || "A closer look at the advanced hardware and key specifications that make it all possible."}
           </p>
         </div>
 

@@ -1,7 +1,13 @@
 export const iphone18ProSpecs = {
   display: {
     title: "Display",
-    image: "https://www.cultofmac.com/wp-content/uploads/2026/04/Dark-Cherry-iPhone-18-Pro-4.jpg",
+    heading: "Display: what the specifications mean in everyday use",
+    subheading:
+      "A closer look at the panel, resolution and refresh rate to understand what they mean for viewing, gaming and everyday use.",
+
+    image:
+      "https://www.cultofmac.com/wp-content/uploads/2026/04/Dark-Cherry-iPhone-18-Pro-4.jpg",
+
     items: [
       {
         label: "Size",
@@ -24,7 +30,13 @@ export const iphone18ProSpecs = {
 
   performance: {
     title: "Performance",
-    image: "https://cdn.wccftech.com/wp-content/uploads/2026/09/Apple-A20-Pro-2.jpg",
+    heading: "Performance: how much power do you actually get?",
+    subheading:
+      "The key hardware behind performance, along with what it means for everyday apps, gaming, multitasking and demanding workloads.",
+
+    image:
+      "https://cdn.wccftech.com/wp-content/uploads/2026/09/Apple-A20-Pro-2.jpg",
+
     items: [
       {
         label: "Chipset",
@@ -43,7 +55,13 @@ export const iphone18ProSpecs = {
 
   camera: {
     title: "Camera",
-    image: "https://www.techadvisor.com/wp-content/uploads/2026/06/iPhone-18-Pro-dark-cherry-3.jpg?quality=50&strip=all&w=1024",
+    heading: "Camera: where the hardware matters — and where it doesn't",
+    subheading:
+      "A breakdown of the camera system, focal lengths and hardware so you can understand what each camera adds to the experience.",
+
+    image:
+      "https://www.techadvisor.com/wp-content/uploads/2026/06/iPhone-18-Pro-dark-cherry-3.jpg?quality=50&strip=all&w=1024",
+
     items: [
       {
         label: "Main Camera",
@@ -66,6 +84,10 @@ export const iphone18ProSpecs = {
 
   battery: {
     title: "Battery",
+    heading: "Battery: capacity is only part of the story",
+    subheading:
+      "The available battery and charging hardware, with context for what they can tell us about everyday endurance and charging convenience.",
+
     items: [
       {
         label: "Capacity",
@@ -84,6 +106,10 @@ export const iphone18ProSpecs = {
 
   design: {
     title: "Design",
+    heading: "Design and build: what you are actually carrying",
+    subheading:
+      "The materials, durability and physical characteristics that affect how the phone feels and holds up in everyday use.",
+
     items: [
       {
         label: "Build",

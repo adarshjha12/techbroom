@@ -53,19 +53,69 @@ export interface SmartphoneContent extends BaseContent {
     amount: number | null;
   };
 
+  specsOverview?: {
+    heading: string;
+    subheading: string;
+  };
 
+  galleryOverview?: {
+    heading: string;
+    subheading: string;
+  };
+
+  reviewsOverview?: {
+    heading: string;
+    subheading: string;
+  };
+
+  comparisonsOverview?: {
+    heading: string;
+    subheading: string;
+  };
+
+  buyDecisionOverview?: {
+    heading: string;
+    subheading: string;
+  };
+
+  cameraSamplesOverview?: {
+    heading: string;
+    subheading: string;
+  };
+
+  cameraVerdictOverview?: {
+    heading: string;
+    subheading: string;
+  };
   specs: Record<string, SmartphoneSpecSection>;
   reviews: SmartphoneOwnerReviews;
   comparisons: SmartphoneComparison[];
   buyDecision: SmartphoneBuyDecision;
   cameraSamples: SmartphoneCameraSample[];
   cameraVerdict: SmartphoneCameraVerdict;
+  assessment: SmartphoneAssessment;
 }
+
+export type SmartphoneAssessmentDepartment = {
+  name: string;
+  score: number;
+  summary: string;
+};
+
+export type SmartphoneAssessment = {
+  overall: number;
+  summary: string;
+  departments: SmartphoneAssessmentDepartment[];
+  pros: string[];
+  cons: string[];
+};
 
 export interface SmartphoneCameraVerdict {
   pros: string[];
   cons: string[];
   summary: string;
+  heading: string;
+  subheading: string;
 }
 
 export interface ContentImage {
@@ -177,6 +227,8 @@ export interface SmartphoneSpecItem {
 export interface SmartphoneSpecSection {
   title: string;
   image?: string;
+  heading: string;
+  subheading: string;
   items: SmartphoneSpecItem[];
 }
 

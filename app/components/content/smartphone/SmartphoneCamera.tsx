@@ -42,15 +42,11 @@ export default function SmartphoneCamera({
           </span>
 
           <h2 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-            More than megapixels.{" "}
-            <br className="hidden md:block" />
-            <span className="bg-gradient-to-b from-white via-neutral-300 to-neutral-600 bg-clip-text text-transparent">
-              A cinematic studio in your pocket.
-            </span>
+            {camera.heading || "Camera: where the hardware matters — and where it doesn't"}
           </h2>
 
           <p className="text-lg leading-8 text-neutral-400">
-            A deeper look at the advanced sensor technology, computational photography, and multi-lens array that capture reality with stunning fidelity.
+            {camera.subheading || "A deeper look at the advanced sensor technology, computational photography, and multi-lens array that capture reality with stunning fidelity."}
           </p>
         </div>
 

@@ -3,6 +3,7 @@ import { iphone18ProSpecs } from "./specs";
 import { iphone18ProReviews } from "./reviews";
 import { iphone18ProComparisons } from "./comparisons";
 import { iphone18ProBuyDecision } from "./buyDecision";
+import { iphone18ProAssessment } from "./assessment";
 
 export const iphone18Pro: SmartphoneContent = {
   slug: "iphone-18-pro",
@@ -14,18 +15,20 @@ export const iphone18Pro: SmartphoneContent = {
   reviews: iphone18ProReviews,
   comparisons: iphone18ProComparisons,
   buyDecision: iphone18ProBuyDecision,
+assessment: iphone18ProAssessment,
   shortDescription:
-    "A premium smartphone focused on performance, camera quality, display and long-term software support.",
+    "A detailed look at the iPhone 18 Pro's display, performance, cameras, battery, design and the trade-offs that matter when deciding whether it is right for you.",
 
   description:
-    "Detailed information, comparisons and real-world analysis of the iPhone 18 Pro.",
+    "An independent breakdown of the iPhone 18 Pro, covering its specifications, real-world strengths, limitations, comparisons and who it makes the most sense for.",
 
   status: "published",
 
   images: {
     hero: "https://images.moneycontrol.com/static-mcnews/2026/06/20260602050725_iPhone-18-Pro-Max.png",
-    hero2: "https://www.macworld.com/wp-content/uploads/2026/08/3212438-0-81154700-1787310034-iPhone-18-Pro-colors-mockup-1.jpg?quality=50&strip=all",
 
+    hero2:
+      "https://www.macworld.com/wp-content/uploads/2026/08/3212438-0-81154700-1787310034-iPhone-18-Pro-colors-mockup-1.jpg?quality=50&strip=all",
 
     gallery: [
       {
@@ -51,55 +54,145 @@ export const iphone18Pro: SmartphoneContent = {
     ],
   },
 
+  specsOverview: {
+    heading: "Specifications: What the Numbers Tell You",
+
+    subheading:
+      "A breakdown of the iPhone 18 Pro's key hardware and specifications, with context to help you understand what they mean in everyday use.",
+  },
+
+  galleryOverview: {
+    heading: "Design and Hardware: A Closer Look",
+
+    subheading:
+      "A visual look at the iPhone 18 Pro's design, materials, camera system and physical details.",
+  },
+
+  reviewsOverview: {
+    heading: "What Owners Say",
+
+    subheading:
+      "Real-world feedback from users, including the things owners appreciate and the issues or compromises they have encountered.",
+  },
+
+  comparisonsOverview: {
+    heading: "How It Compares",
+
+    subheading:
+      "A side-by-side look at how the iPhone 18 Pro compares with relevant alternatives across performance, cameras, display, features and overall value.",
+  },
+
+  buyDecisionOverview: {
+    heading: "Is It Right for You?",
+
+    subheading:
+      "A decision-focused breakdown of who is likely to benefit from the iPhone 18 Pro, who may want to consider alternatives, and which priorities should guide the decision.",
+  },
+
+  cameraSamplesOverview: {
+    heading: "Camera Samples: See the Results",
+
+    subheading:
+      "Sample images across different cameras and shooting conditions, giving you a closer look at image quality beyond the specifications.",
+  },
+
+  cameraVerdictOverview: {
+    heading: "Camera Analysis: Strengths and Trade-offs",
+
+    subheading:
+      "An evidence-based look at the camera system's strengths, limitations and real-world behavior across different shooting situations.",
+  },
   cameraSamples: [
     {
       title: "Main Camera",
       credit: "Austin Mann",
       creditUrl: "https://www.austinmann.com",
       cameraScore: 9.6,
-      thoughts: "Exceptional dynamic range and color reproduction. The sensor shift stabilization makes low-light handheld shots incredibly sharp.",
-      image: "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_3543_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+      thoughts:
+        "Exceptional dynamic range and color reproduction. The sensor-shift stabilization helps keep handheld shots sharp in challenging light.",
+      image:
+        "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_3543_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
       category: "main",
-      metadata: { focalLength: "24mm", aperture: "f/1.48", shutterSpeed: "1/100s", iso: "ISO 80" },
+      metadata: {
+        focalLength: "24mm",
+        aperture: "f/1.48",
+        shutterSpeed: "1/100s",
+        iso: "ISO 80",
+      },
     },
     {
       title: "Portrait",
-      image: "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_4416_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+      image:
+        "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_4416_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
       category: "portrait",
-      thoughts: "Sublime depth mapping. The background blur rolls off naturally like a DSLR, with perfect edge detection around hair.",
+      thoughts:
+        "Portrait separation is strong, with natural-looking background blur and convincing subject edges.",
       cameraScore: 9.4,
-      metadata: { focalLength: "48mm", aperture: "f/2.2" },
+      metadata: {
+        focalLength: "48mm",
+        aperture: "f/2.2",
+      },
     },
     {
       title: "Telephoto 5x",
-      image: "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_4782_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+      image:
+        "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_4782_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
       category: "telephoto",
-      thoughts: "The tetraprism lens delivers stunning optical compression. Minimal noise even at 5x zoom.",
+      thoughts:
+        "The 5x telephoto lens provides strong optical reach with good detail retention and controlled noise.",
       cameraScore: 9.2,
-      metadata: { focalLength: "120mm", aperture: "f/2.8" },
+      metadata: {
+        focalLength: "120mm",
+        aperture: "f/2.8",
+      },
     },
     {
       title: "Ultrawide",
-      image: "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_2572_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+      image:
+        "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_2572_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
       category: "ultrawide",
-      thoughts: "Vast field of view with almost zero edge distortion thanks to the new photonic engine processing.",
+      thoughts:
+        "The ultrawide camera provides a wide field of view while maintaining good correction of edge distortion.",
       cameraScore: 8.9,
-      metadata: { focalLength: "13mm", aperture: "f/2.2" },
+      metadata: {
+        focalLength: "13mm",
+        aperture: "f/2.2",
+      },
     },
     {
       title: "Night Mode",
-      image: "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_0273_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
+      image:
+        "https://www.austinmann.com/content/trek/iphone-18-pro-camera-review-dunton/images/IMG_0273_2560.jpg?dpl=dpl_9Y1LNq4YPbpUz6kAgVFh5k57oan1",
       category: "night",
-      thoughts: "Preserves the mood perfectly. It lifts shadows without making the night look like artificial daylight.",
+      thoughts:
+        "Night processing preserves the atmosphere of darker scenes while lifting enough shadow detail to retain useful information.",
       cameraScore: 9.5,
-      metadata: { focalLength: "24mm", aperture: "f/1.48", shutterSpeed: "2.0s" },
+      metadata: {
+        focalLength: "24mm",
+        aperture: "f/1.48",
+        shutterSpeed: "2.0s",
+      },
     },
   ],
 
   cameraVerdict: {
-    pros: ["Industry-leading video stabilization", "Zero shutter lag across all lenses", "Natural portrait roll-off"],
-    cons: ["Ultrawide gets slightly soft at the edges in extreme low light", "Aggressive HDR sometimes flattens contrast"],
-    summary: "The most versatile camera system in a smartphone. If you prioritize reliable point-and-shoot quality and unmatched video performance, this is the definitive choice.",
+     heading: "Camera: where the hardware matters — and where it doesn't",
+    subheading:
+      "A breakdown of the camera system, focal lengths and hardware so you can understand what each camera adds to the experience.",
+
+    pros: [
+      "Strong video stabilization",
+      "Consistent results across the camera system",
+      "Natural-looking portrait rendering",
+    ],
+
+    cons: [
+      "Ultrawide images can lose edge detail in very low light",
+      "HDR processing can sometimes reduce perceived contrast",
+    ],
+
+    summary:
+      "The camera system combines strong image quality, versatile focal lengths and capable video recording. Its advantages are most relevant to people who regularly use multiple cameras or place a high value on reliable point-and-shoot and video performance.",
   },
 
   price: {

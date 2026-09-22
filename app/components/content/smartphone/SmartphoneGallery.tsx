@@ -3,10 +3,15 @@ import type { ContentImage } from "@/lib/content/types";
 
 type SmartphoneGalleryProps = {
   images: ContentImage[];
+  galleryOverview: {
+    heading: string;
+    subheading: string;
+  } | undefined;
 };
 
 export default function SmartphoneGallery({
   images,
+  galleryOverview,
 }: SmartphoneGalleryProps) {
   if (images.length === 0) {
     return null;
@@ -21,12 +26,11 @@ export default function SmartphoneGallery({
           </p>
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
-            Take a closer look
+            {galleryOverview?.heading || "Take a closer look"}
           </h2>
 
           <p className="mt-4 text-base leading-7 text-neutral-600">
-            Explore the design, display and camera hardware from different
-            angles.
+            {galleryOverview?.subheading || "Explore the design, display and camera hardware from different angles."}
           </p>
         </div>
 

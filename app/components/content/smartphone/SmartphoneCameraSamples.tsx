@@ -181,7 +181,7 @@ export default function SmartphoneCameraSamples({
             Real-World Testing
           </p>
           <h2 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
-            See the results.
+            {verdict?.heading || "Camera Samples: how the lenses perform in real-world scenarios"}
 
             {samples[0].credit && (
               <p className="mt-2 text-lg text-neutral-500">
@@ -288,7 +288,7 @@ export default function SmartphoneCameraSamples({
                   Camera Performance Breakdown
                 </h3>
                 <p className="mt-4 text-neutral-400">
-                  We've analyzed every lens. Here is how they stack up.
+                  We&apos;ve analyzed every lens. Here is how they stack up.
                 </p>
               </div>
 
@@ -328,7 +328,7 @@ export default function SmartphoneCameraSamples({
                 {/* Verdict Text & Pros/Cons */}
                 <div className="max-w-xl">
                   <h3 className="text-3xl font-bold text-white mb-4">
-                    The Final Verdict
+                    The Final Verdict For Camera
                   </h3>
                   <p className="text-lg text-neutral-300 leading-relaxed mb-8">
                     {verdict.summary}

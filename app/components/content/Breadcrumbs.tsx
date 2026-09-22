@@ -14,7 +14,7 @@ export default function Breadcrumbs({
     return (
         <nav
             aria-label="Breadcrumb"
-            className="mx-auto flex max-w-5xl items-center gap-2 px-6 pt-4  pb-4 text-sm"    >
+            className="mx-auto flex max-w-5xl items-center gap-2 px-6 pt-3  pb-2 text-sm"    >
             <Link
                 href="/"
                 aria-label="Home"

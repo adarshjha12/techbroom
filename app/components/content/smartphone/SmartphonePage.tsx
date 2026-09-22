@@ -13,6 +13,7 @@ import SmartphoneStructuredData from "./SmartphoneStructuredData";
 import Breadcrumbs from "../Breadcrumbs";
 import SmartphoneCameraSamples from "./SmartphoneCameraSamples";
 import SmartphoneGallery from "./SmartphoneGallery";
+import SmartphoneAssessment from "./SmartphoneAssessment";
 
 type SmartphonePageProps = {
   content: SmartphoneContent;
@@ -23,7 +24,7 @@ export default function SmartphonePage({
 }: SmartphonePageProps) {
   return (
     <div>
-      {/* <Breadcrumbs
+      <Breadcrumbs
         items={[
           {
             label: "Smartphones",
@@ -33,13 +34,16 @@ export default function SmartphonePage({
             label: content.name,
           },
         ]}
-      /> */}
+      />
       <SmartphoneStructuredData content={content} />
 
       <SmartphoneHero content={content} />
-      <SmartphoneGallery images={content.images.gallery} />
+      <SmartphoneAssessment
+  assessment={content.assessment}
+/>
+      <SmartphoneGallery images={content.images.gallery} galleryOverview={content?.galleryOverview} />
 
-      <SmartphoneOverview specs={content.specs} />
+      <SmartphoneOverview specs={content.specs} specsOverview={content?.specsOverview} />
 
       <SmartphoneDisplay specs={content.specs} />
 
@@ -52,7 +56,7 @@ export default function SmartphonePage({
         verdict={content.cameraVerdict}
       />
 
-      <SmartphoneBattery specs={content.specs} />
+      <SmartphoneBattery specs={content.specs}/>
 
       <SmartphoneOwnerReviews reviews={content.reviews} />
 

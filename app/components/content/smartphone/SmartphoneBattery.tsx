@@ -69,13 +69,12 @@ export default function SmartphoneBattery({
           </div>
 
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 md:text-5xl">
-            Power that keeps up.
+            {battery.heading || "Battery: capacity is only part of the story"}
           </h2>
 
           <p className="mt-5 text-base leading-7 text-neutral-600">
-            Battery capacity is only part of the story. Charging speed,
-            efficiency, software, and everyday usage all affect how long a
-            phone lasts.
+           {battery.subheading ||
+            "The available battery and charging hardware, with context for what they can tell us about everyday endurance and charging convenience."}
           </p>
         </div>
 

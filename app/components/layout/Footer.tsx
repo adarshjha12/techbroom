@@ -4,6 +4,7 @@ import {
   Mail,
 } from "lucide-react";
 import { FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import CameraLens from "../CameraLens";
 
 function Footer() {
   return (
@@ -15,13 +16,17 @@ function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-5">
-            <Link
-              href="/"
-              className="text-2xl font-bold tracking-tighter text-neutral-900"
-            >
-              TechBroom
-            </Link>
-
+             {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center text-2xl text-neutral-900 font-bold tracking-tighter md:text-3xl"
+          aria-label="TechBroom Home"
+        >
+          Techbr
+          <CameraLens />
+          <CameraLens />
+          m
+        </Link>
             <p className="mt-5 max-w-sm text-sm leading-6 text-neutral-500">
               Technology explained clearly. Products compared honestly.
               Decisions made easier.

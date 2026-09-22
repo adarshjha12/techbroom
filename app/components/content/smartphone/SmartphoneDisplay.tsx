@@ -68,14 +68,11 @@ export default function SmartphoneDisplay({ specs }: SmartphoneDisplayProps) {
           </p>
 
           <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 sm:text-5xl md:text-6xl lg:text-7xl">
-             Has Super Retina XDR OLED Panel<br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 via-neutral-600 to-neutral-400">
-             to stand out.
-            </span>
+             {display.heading || "Display: what the specifications mean in everyday use"}
           </h2>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-600 sm:text-xl">
-            Explore the advanced display technology, edge-to-edge size, ultra-crisp resolution, and adaptive refresh rate that shape an unparalleled viewing experience.
+            {display.subheading || "A closer look at the panel, resolution and refresh rate to understand what they mean for viewing, gaming and everyday use."}
           </p>
         </motion.div>
 

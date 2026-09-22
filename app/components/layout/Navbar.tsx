@@ -9,7 +9,7 @@ interface NavbarProps {
 
 function Navbar({ menuOpen, onMenuToggle }: NavbarProps) {
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-neutral-100 bg-white/70 backdrop-blur-md">
+    <nav className="fixed top-0 z-50 w-full border-b border-neutral-200 bg-white/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}

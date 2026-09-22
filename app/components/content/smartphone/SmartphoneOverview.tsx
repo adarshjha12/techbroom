@@ -139,7 +139,7 @@ export default function SmartphoneOverview({
           </div>
 
           <h2 className="mb-6 text-4xl font-extrabold tracking-tighter text-zinc-900 sm:text-6xl bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-600 bg-clip-text text-transparent">
-            Pro in every way.
+            Specs Overview
           </h2>
 
           <p className="text-lg font-medium leading-relaxed tracking-tight text-zinc-500 sm:text-xl">

@@ -68,9 +68,9 @@ export default function SmartphoneDisplay({ specs }: SmartphoneDisplayProps) {
           </p>
 
           <h2 className="text-4xl font-extrabold tracking-tight text-neutral-950 sm:text-5xl md:text-6xl lg:text-7xl">
-            A screen designed to <br className="hidden md:block" />
+             Has Super Retina XDR OLED Panel<br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 via-neutral-600 to-neutral-400">
-              stand out.
+             to stand out.
             </span>
           </h2>
 

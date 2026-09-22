@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 import { getAllContent } from "@/lib/content/getContent";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Smartphones",
@@ -109,7 +110,9 @@ export default function SmartphonesPage() {
                 >
                   {phone.images.hero ? (
                     <div className="flex h-56 items-center justify-center border-b border-neutral-200 bg-neutral-50 p-6">
-                      <img
+                      <Image
+                      width={800}
+                      height={800}  
                         src={phone.images.hero}
                         alt={phone.name}
                         className="max-h-full max-w-full object-contain"

@@ -3,6 +3,9 @@ import type { SmartphoneBuyDecision } from "@/lib/content/types";
 export const iphone18ProBuyDecision: SmartphoneBuyDecision = {
   summary:
     "Whether this phone is right for you depends on your priorities, budget, and how you use your phone.",
+     rating: 4.5,
+  bestRating: 5,
+
 
   reasonsToBuy: [
     "You prioritize a premium smartphone experience.",

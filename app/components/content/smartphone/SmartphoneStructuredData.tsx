@@ -23,10 +23,48 @@ export default function SmartphoneStructuredData({
     }),
 
     ...(content.images.hero && {
-      image: [`https://techbroom.com${content.images.hero}`],
+      image: [content.images.hero],
     }),
 
     url: `https://techbroom.com/${content.slug}`,
+
+    review: {
+      "@type": "Review",
+
+      author: {
+        "@type": "Organization",
+        name: "TechBroom",
+      },
+
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: content.buyDecision.rating,
+        bestRating: content.buyDecision.bestRating,
+        worstRating: 1,
+      },
+
+      positiveNotes: {
+        "@type": "ItemList",
+        itemListElement: content.buyDecision.reasonsToBuy.map(
+          (item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item,
+          })
+        ),
+      },
+
+      negativeNotes: {
+        "@type": "ItemList",
+        itemListElement: content.buyDecision.reasonsToSkip.map(
+          (item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item,
+          })
+        ),
+      },
+    },
   };
 
   const breadcrumbSchema = {

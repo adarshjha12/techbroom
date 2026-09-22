@@ -122,7 +122,8 @@ export interface SmartphoneComparison {
 
 export interface SmartphoneBuyDecision {
   summary: string;
-
+rating: number;
+  bestRating: number;
   reasonsToBuy: string[];
 
   reasonsToSkip: string[];

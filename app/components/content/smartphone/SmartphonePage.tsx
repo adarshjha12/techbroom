@@ -14,6 +14,7 @@ import Breadcrumbs from "../Breadcrumbs";
 import SmartphoneCameraSamples from "./SmartphoneCameraSamples";
 import SmartphoneGallery from "./SmartphoneGallery";
 import SmartphoneAssessment from "./SmartphoneAssessment";
+import SmartphonePerformanceAnalysis from "./SmartphonePerformanceAnalysis";
 
 type SmartphonePageProps = {
   content: SmartphoneContent;
@@ -41,6 +42,8 @@ export default function SmartphonePage({
       <SmartphoneAssessment
   assessment={content.assessment}
 />
+
+<SmartphonePerformanceAnalysis performance={content.performance} />
       <SmartphoneGallery images={content.images.gallery} galleryOverview={content?.galleryOverview} />
 
       <SmartphoneOverview specs={content.specs} specsOverview={content?.specsOverview} />

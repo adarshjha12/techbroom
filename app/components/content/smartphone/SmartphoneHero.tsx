@@ -124,7 +124,7 @@ export default function SmartphoneHero({ content }: SmartphoneHeroProps) {
               href="#camera"
               className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:bg-neutral-200 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             >
-              Explore Camera
+            {content.heroContent.primaryCta}
               <svg
                 className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                 fill="none"
@@ -136,10 +136,11 @@ export default function SmartphoneHero({ content }: SmartphoneHeroProps) {
             </a>
 
             <a
-              href="#overview"
+              href="#assessment"
               className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:border-white/40 hover:bg-white/10 hover:scale-105 active:scale-95"
             >
-              Overview
+                {content.heroContent.secondaryCta}
+
             </a>
           </motion.div>
 
@@ -232,30 +233,6 @@ export default function SmartphoneHero({ content }: SmartphoneHeroProps) {
               </motion.div>
             </AnimatePresence>
 
-            {/* Floating Spatial Feature Chips - Pushed further left/right to avoid blocking big phone */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-4 lg:-left-12 top-2 z-30 rounded-2xl border border-white/10 bg-neutral-900/70 p-4 backdrop-blur-xl shadow-2xl hidden sm:block"
-              style={{ transform: "translateZ(60px)" }}
-            >
-              <p className="text-[10px] uppercase tracking-wider text-neutral-400 font-medium">
-                Material
-              </p>
-              <p className="text-sm font-semibold text-white">Grade 5 Titanium</p>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-4 lg:-right-12 bottom-1/4 z-30 rounded-2xl border border-white/10 bg-neutral-900/70 p-4 backdrop-blur-xl shadow-2xl hidden sm:block"
-              style={{ transform: "translateZ(80px)" }}
-            >
-              <p className="text-[10px] uppercase tracking-wider text-neutral-400 font-medium">
-                Performance
-              </p>
-              <p className="text-sm font-semibold text-emerald-400">Next-Gen Architecture</p>
-            </motion.div>
           </motion.div>
         </div>
 

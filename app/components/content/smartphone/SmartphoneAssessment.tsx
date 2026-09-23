@@ -309,7 +309,7 @@ export default function SmartphoneAssessment({
     const overallTier = getAppleRatingTier(assessment.overall);
 
     return (
-        <section className="mx-auto w-full max-w-7xl bg-white px-4 py-12 sm:px-6 lg:px-8 font-sans antialiased text-[#1d1d1f]">
+        <section id="assessment" className="mx-auto w-full max-w-7xl bg-white px-4 py-12 sm:px-6 lg:px-8 font-sans antialiased text-[#1d1d1f]">
             {/* Apple Section Header */}
             <motion.div
                 initial={{ opacity: 0, y: 15 }}

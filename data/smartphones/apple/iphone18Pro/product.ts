@@ -4,6 +4,7 @@ import { iphone18ProReviews } from "./reviews";
 import { iphone18ProComparisons } from "./comparisons";
 import { iphone18ProBuyDecision } from "./buyDecision";
 import { iphone18ProAssessment } from "./assessment";
+import { iphone18ProPerformance } from "./performance";
 
 export const iphone18Pro: SmartphoneContent = {
   slug: "iphone-18-pro",
@@ -23,6 +24,29 @@ assessment: iphone18ProAssessment,
     "An independent breakdown of the iPhone 18 Pro, covering its specifications, real-world strengths, limitations, comparisons and who it makes the most sense for.",
 
   status: "published",
+
+  heroContent: {
+  heading: "iPhone 18 Pro",
+  subheading:
+    "A detailed look at its performance, cameras, display, battery, software and the trade-offs that matter when deciding whether it is right for you.",
+
+  primaryCta: "Explore the Analysis",
+  secondaryCta: "View Assessment",
+  
+
+  features: [
+    {
+      label: "Build",
+      value: "Titanium",
+    },
+    {
+      label: "Performance",
+      value: "A20 Pro",
+    },
+  ],
+},
+
+performance: iphone18ProPerformance,
 
   images: {
     hero: "https://images.moneycontrol.com/static-mcnews/2026/06/20260602050725_iPhone-18-Pro-Max.png",

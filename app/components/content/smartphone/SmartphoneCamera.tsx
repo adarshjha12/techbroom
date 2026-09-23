@@ -42,7 +42,7 @@ export default function SmartphoneCamera({
           </span>
 
           <h2 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-            {camera.heading || "Camera: where the hardware matters — and where it doesn't"}
+            {camera.heading || "Does it take great photos? The answer is yes."}
           </h2>
 
           <p className="text-lg leading-8 text-neutral-400">

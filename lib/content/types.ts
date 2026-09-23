@@ -47,6 +47,7 @@ export interface BaseContent {
 export interface SmartphoneContent extends BaseContent {
   type: "smartphone";
   category: "smartphone";
+  heroContent: heroContentType;
 
   price?: {
     currency: string;
@@ -94,6 +95,18 @@ export interface SmartphoneContent extends BaseContent {
   cameraSamples: SmartphoneCameraSample[];
   cameraVerdict: SmartphoneCameraVerdict;
   assessment: SmartphoneAssessment;
+  performance: SmartphonePerformance;
+}
+
+export type heroContentType  = {
+  heading: string;
+  subheading: string;
+  primaryCta: string;
+  secondaryCta: string;
+  features: {
+    label: string;
+    value: string;
+  }[];
 }
 
 export type SmartphoneAssessmentDepartment = {
@@ -117,6 +130,91 @@ export interface SmartphoneCameraVerdict {
   heading: string;
   subheading: string;
 }
+export type SmartphonePerformanceArchitecture = {
+  cpu: string;
+  gpu: string;
+  process: string;
+  summary: string;
+};
+
+export type SmartphoneGeekbenchResults = {
+  singleCore: number | null;
+  multiCore: number | null;
+};
+
+export type SmartphoneAntutuResults = {
+  total: number | null;
+  cpu: number | null;
+  gpu: number | null;
+  memory: number | null;
+  ux: number | null;
+};
+
+export type SmartphonePerformanceBenchmarks = {
+  geekbench: SmartphoneGeekbenchResults;
+  antutu: SmartphoneAntutuResults;
+};
+
+export type SmartphoneGamingTest = {
+  name: string;
+  settings: string;
+  averageFps: number | null;
+  fpsRange: string;
+  duration: string;
+  notes?: string;
+};
+
+export type SmartphoneSustainedGaming = {
+  summary: string;
+  performanceDrop: string | null;
+};
+
+export type SmartphoneGamingPerformance = {
+  games: SmartphoneGamingTest[];
+  sustainedPerformance: SmartphoneSustainedGaming;
+};
+
+export type SmartphoneThermalBehavior = {
+  summary: string;
+  peakTemperature: string | null;
+  sustainedTemperature: string | null;
+};
+
+export type SmartphoneAppLoading = {
+  summary: string;
+  observations: string[];
+};
+
+export type SmartphonePerformanceBatteryImpact = {
+  gaming: string | null;
+  heavyUse: string | null;
+  summary: string;
+};
+
+export type SmartphonePerformanceAnalysis = {
+  summary: string;
+  strengths: string[];
+  limitations: string[];
+};
+
+export type SmartphonePerformance = {
+  heading: string;
+  subheading: string;
+
+  architecture: SmartphonePerformanceArchitecture;
+
+  benchmarks: SmartphonePerformanceBenchmarks;
+
+  gaming: SmartphoneGamingPerformance;
+
+  thermal: SmartphoneThermalBehavior;
+
+  appLoading: SmartphoneAppLoading;
+
+  batteryImpact: SmartphonePerformanceBatteryImpact;
+
+  analysis: SmartphonePerformanceAnalysis;
+};
 
 export interface ContentImage {
   title: string;

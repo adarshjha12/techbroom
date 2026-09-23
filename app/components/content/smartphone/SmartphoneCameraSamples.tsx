@@ -181,7 +181,7 @@ export default function SmartphoneCameraSamples({
             Real-World Testing
           </p>
           <h2 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
-            {verdict?.heading || "Camera Samples: how the lenses perform in real-world scenarios"}
+            {"Camera Samples: how the lenses perform in real-world scenarios"}
 
             {samples[0].credit && (
               <p className="mt-2 text-lg text-neutral-500">
